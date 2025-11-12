@@ -1,0 +1,118 @@
+| **Category**                           | **Command**         | **Definition / Purpose**                | **Example Usage**                        |              |
+| -------------------------------------- | ------------------- | --------------------------------------- | ---------------------------------------- | ------------ |
+| 🗂️ **File & Directory Management**    | `pwd`               | Prints current working directory        | `pwd`                                    |              |
+|                                        | `ls`                | Lists files and directories             | `ls -l`                                  |              |
+|                                        | `cd`                | Changes directory                       | `cd /home/user`                          |              |
+|                                        | `mkdir`             | Creates a new directory                 | `mkdir project`                          |              |
+|                                        | `rmdir`             | Removes an empty directory              | `rmdir old_dir`                          |              |
+|                                        | `rm`                | Removes files or directories            | `rm file.txt` / `rm -rf folder`          |              |
+|                                        | `cp`                | Copies files or directories             | `cp file1.txt /backup/`                  |              |
+|                                        | `mv`                | Moves or renames files                  | `mv old.txt new.txt`                     |              |
+|                                        | `touch`             | Creates empty file or updates timestamp | `touch notes.txt`                        |              |
+|                                        | `cat`               | Displays file contents                  | `cat file.txt`                           |              |
+|                                        | `head`              | Displays first few lines                | `head -n 10 file.txt`                    |              |
+|                                        | `tail`              | Displays last few lines                 | `tail -f logfile.log`                    |              |
+|                                        | `more`              | Displays content one page at a time     | `more longfile.txt`                      |              |
+|                                        | `less`              | Advanced file viewer (scroll up/down)   | `less access.log`                        |              |
+|                                        | `file`              | Shows file type info                    | `file image.png`                         |              |
+|                                        | `tree`              | Displays directory structure            | `tree /home/user`                        |              |
+|                                        | `stat`              | Shows file details                      | `stat file.txt`                          |              |
+|                                        | `find`              | Searches files/folders                  | `find / -name "*.log"`                   |              |
+|                                        | `locate`            | Quickly finds files using index         | `locate nginx.conf`                      |              |
+|                                        | `du`                | Shows file/folder disk usage            | `du -sh *`                               |              |
+|                                        | `df`                | Displays disk space usage               | `df -h`                                  |              |
+|                                        | `ln -s`             | Creates symbolic link                   | `ln -s /opt/app /usr/local/app`          |              |
+| 🧑‍💻 **User & Permission Management** | `whoami`            | Shows current logged-in user            | `whoami`                                 |              |
+|                                        | `who`               | Lists all logged-in users               | `who`                                    |              |
+|                                        | `id`                | Displays user ID and groups             | `id username`                            |              |
+|                                        | `adduser`           | Creates a new user                      | `sudo adduser devops`                    |              |
+|                                        | `deluser`           | Deletes a user                          | `sudo deluser testuser`                  |              |
+|                                        | `passwd`            | Changes user password                   | `passwd username`                        |              |
+|                                        | `su`                | Switches user                           | `su root`                                |              |
+|                                        | `sudo`              | Runs command as superuser               | `sudo apt update`                        |              |
+|                                        | `chmod`             | Changes file permissions                | `chmod 755 script.sh`                    |              |
+|                                        | `chown`             | Changes file ownership                  | `chown ubuntu:ubuntu file.txt`           |              |
+|                                        | `groups`            | Lists groups for a user                 | `groups devops`                          |              |
+| 🧠 **System Information**              | `uname -a`          | Shows OS, kernel version                | `uname -a`                               |              |
+|                                        | `hostnamectl`       | Displays or sets hostname               | `hostnamectl set-hostname webserver`     |              |
+|                                        | `uptime`            | Shows system uptime and load            | `uptime`                                 |              |
+|                                        | `top`               | Displays active processes               | `top`                                    |              |
+|                                        | `htop`              | Interactive process monitor             | `htop`                                   |              |
+|                                        | `ps aux`            | Lists all processes                     | `ps aux                                  | grep nginx`  |
+|                                        | `kill -9 <PID>`     | Terminates process by ID                | `kill -9 1234`                           |              |
+|                                        | `vmstat`            | Shows CPU, memory, IO stats             | `vmstat 2`                               |              |
+|                                        | `lscpu`             | Displays CPU architecture               | `lscpu`                                  |              |
+|                                        | `lsblk`             | Lists all block devices (disks)         | `lsblk`                                  |              |
+|                                        | `lshw`              | Shows hardware details                  | `sudo lshw -short`                       |              |
+|                                        | `free -h`           | Shows memory usage                      | `free -h`                                |              |
+|                                        | `df -h`             | Shows disk usage                        | `df -h`                                  |              |
+|                                        | `du -sh`            | Summarizes directory size               | `du -sh /var/log`                        |              |
+| 🌐 **Networking Commands**             | `ifconfig`          | Displays network interfaces             | `ifconfig`                               |              |
+|                                        | `ip addr`           | Shows IP addresses                      | `ip addr show`                           |              |
+|                                        | `ping`              | Tests network connectivity              | `ping google.com`                        |              |
+|                                        | `traceroute`        | Traces route to a host                  | `traceroute google.com`                  |              |
+|                                        | `nslookup`          | Queries DNS info                        | `nslookup github.com`                    |              |
+|                                        | `netstat -tulnp`    | Lists active ports                      | `sudo netstat -tulnp`                    |              |
+|                                        | `ss -tuln`          | Modern netstat alternative              | `sudo ss -tuln`                          |              |
+|                                        | `curl`              | Sends HTTP requests                     | `curl -I https://example.com`            |              |
+|                                        | `wget`              | Downloads files                         | `wget https://example.com/file.zip`      |              |
+|                                        | `scp`               | Securely copies files                   | `scp file.txt user@host:/home/user/`     |              |
+|                                        | `rsync`             | Syncs directories across systems        | `rsync -avz /data/ user@server:/backup/` |              |
+|                                        | `ssh`               | Connects to remote servers              | `ssh ubuntu@192.168.1.10`                |              |
+|                                        | `hostname -I`       | Displays local IP address               | `hostname -I`                            |              |
+| 🧰 **Package Management**              | `apt update`        | Updates package list (Debian/Ubuntu)    | `sudo apt update`                        |              |
+|                                        | `apt upgrade`       | Installs updates                        | `sudo apt upgrade -y`                    |              |
+|                                        | `apt install`       | Installs a package                      | `sudo apt install nginx`                 |              |
+|                                        | `apt remove`        | Removes a package                       | `sudo apt remove nginx`                  |              |
+|                                        | `apt autoremove`    | Removes unused dependencies             | `sudo apt autoremove`                    |              |
+|                                        | `yum install`       | Installs package (RHEL/CentOS)          | `sudo yum install git`                   |              |
+|                                        | `yum update`        | Updates packages                        | `sudo yum update -y`                     |              |
+|                                        | `dnf`               | Modern Yum alternative                  | `sudo dnf install docker`                |              |
+| ⚙️ **Process & Service Management**    | `systemctl start`   | Starts a service                        | `sudo systemctl start nginx`             |              |
+|                                        | `systemctl stop`    | Stops a service                         | `sudo systemctl stop nginx`              |              |
+|                                        | `systemctl restart` | Restarts a service                      | `sudo systemctl restart nginx`           |              |
+|                                        | `systemctl status`  | Shows service status                    | `sudo systemctl status docker`           |              |
+|                                        | `service`           | Manages SysVinit services               | `sudo service apache2 restart`           |              |
+|                                        | `jobs`              | Lists background jobs                   | `jobs`                                   |              |
+|                                        | `bg`                | Resumes a job in background             | `bg %1`                                  |              |
+|                                        | `fg`                | Brings background job to foreground     | `fg %1`                                  |              |
+| 🧮 **Compression & Archiving**         | `tar -cvf`          | Creates tar archive                     | `tar -cvf backup.tar /home/user`         |              |
+|                                        | `tar -xvf`          | Extracts tar archive                    | `tar -xvf backup.tar`                    |              |
+|                                        | `gzip`              | Compresses file                         | `gzip file.txt`                          |              |
+|                                        | `gunzip`            | Decompresses file                       | `gunzip file.txt.gz`                     |              |
+|                                        | `zip`               | Creates zip archive                     | `zip archive.zip *.log`                  |              |
+|                                        | `unzip`             | Extracts zip archive                    | `unzip archive.zip`                      |              |
+| 🔍 **Search & Filter**                 | `grep`              | Searches text in files                  | `grep "error" app.log`                   |              |
+|                                        | `awk`               | Text filtering & processing             | `awk '{print $1,$2}' logfile.txt`        |              |
+|                                        | `sed`               | Stream editor for modifying text        | `sed -i 's/old/new/g' config.txt`        |              |
+|                                        | `cut`               | Cuts specific columns from text         | `cut -d':' -f1 /etc/passwd`              |              |
+|                                        | `sort`              | Sorts text lines                        | `sort names.txt`                         |              |
+|                                        | `uniq`              | Removes duplicates                      | `uniq sorted.txt`                        |              |
+|                                        | `wc -l`             | Counts lines in a file                  | `wc -l access.log`                       |              |
+| 💾 **Disk & Storage**                  | `mount`             | Mounts a drive                          | `sudo mount /dev/sdb1 /mnt`              |              |
+|                                        | `umount`            | Unmounts a drive                        | `sudo umount /mnt`                       |              |
+|                                        | `lsblk`             | Lists disks and partitions              | `lsblk`                                  |              |
+|                                        | `blkid`             | Displays UUIDs of partitions            | `sudo blkid`                             |              |
+| 🧱 **Automation & Scheduling**         | `crontab -e`        | Edits cron jobs                         | `crontab -e`                             |              |
+|                                        | `crontab -l`        | Lists scheduled jobs                    | `crontab -l`                             |              |
+|                                        | `at`                | Schedules one-time command              | `at 5pm`                                 |              |
+| 🔑 **SSH & Security**                  | `ssh-keygen`        | Generates SSH keys                      | `ssh-keygen -t rsa -b 4096`              |              |
+|                                        | `ssh-copy-id`       | Copies SSH key to remote host           | `ssh-copy-id user@host`                  |              |
+|                                        | `ufw enable`        | Enables firewall                        | `sudo ufw enable`                        |              |
+|                                        | `ufw allow 22`      | Allows SSH port                         | `sudo ufw allow 22`                      |              |
+| 🧰 **DevOps / Tools Related**          | `docker --version`  | Checks Docker version                   | `docker --version`                       |              |
+|                                        | `docker ps`         | Lists running containers                | `docker ps -a`                           |              |
+|                                        | `docker images`     | Lists available images                  | `docker images`                          |              |
+|                                        | `docker run`        | Runs a container                        | `docker run -d -p 80:80 nginx`           |              |
+|                                        | `docker exec -it`   | Executes inside container               | `docker exec -it container_id /bin/bash` |              |
+|                                        | `kubectl get pods`  | Lists Kubernetes pods                   | `kubectl get pods -n default`            |              |
+|                                        | `kubectl logs pod`  | Shows logs of a pod                     | `kubectl logs podname`                   |              |
+|                                        | `git init`          | Initializes local git repo              | `git init`                               |              |
+|                                        | `git add .`         | Stages all changes                      | `git add .`                              |              |
+|                                        | `git commit -m`     | Commits changes                         | `git commit -m "message"`                |              |
+|                                        | `git push origin`   | Pushes code to GitHub                   | `git push origin main`                   |              |
+| ⚡ **Miscellaneous**                    | `history`           | Shows recent commands                   | `history                                 | grep docker` |
+|                                        | `clear`             | Clears terminal                         | `clear`                                  |              |
+|                                        | `exit`              | Exits shell                             | `exit`                                   |              |
+|                                        | `reboot`            | Restarts the system                     | `sudo reboot`                            |              |
+|                                        | `shutdown now`      | Shuts down immediately                  | `sudo shutdown now`                      |              |
