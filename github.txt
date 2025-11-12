@@ -1,0 +1,59 @@
+| **Category**                        | **Command**                                       | **Description / Purpose**              | **Example Usage**                                              |
+| ----------------------------------- | ------------------------------------------------- | -------------------------------------- | -------------------------------------------------------------- |
+| 🧱 **Git Setup & Configuration**    | `git --version`                                   | Check installed Git version            | `git --version`                                                |
+|                                     | `git config --global user.name "Your Name"`       | Set your username globally             | `git config --global user.name "Yuvan"`                        |
+|                                     | `git config --global user.email "your@email.com"` | Set your Git email globally            | `git config --global user.email "yuvan@gmail.com"`             |
+|                                     | `git config --list`                               | View all Git configurations            | `git config --list`                                            |
+| 📁 **Repository Initialization**    | `git init`                                        | Initialize a new local Git repository  | `git init`                                                     |
+|                                     | `git clone <repo-url>`                            | Clone a GitHub repository              | `git clone https://github.com/user/repo.git`                   |
+|                                     | `git remote -v`                                   | View remote repository URLs            | `git remote -v`                                                |
+|                                     | `git remote add origin <url>`                     | Add a remote GitHub repository         | `git remote add origin https://github.com/yuvan/myproject.git` |
+|                                     | `git remote remove origin`                        | Remove linked remote                   | `git remote remove origin`                                     |
+| 🧩 **Staging & Committing Changes** | `git status`                                      | View current repo status               | `git status`                                                   |
+|                                     | `git add <file>`                                  | Stage a specific file for commit       | `git add index.html`                                           |
+|                                     | `git add .`                                       | Stage all modified files               | `git add .`                                                    |
+|                                     | `git reset <file>`                                | Unstage a file                         | `git reset index.html`                                         |
+|                                     | `git commit -m "message"`                         | Commit staged changes with message     | `git commit -m "Initial commit"`                               |
+|                                     | `git commit -am "message"`                        | Add + commit tracked files at once     | `git commit -am "Updated app.js"`                              |
+| 🌿 **Branching**                    | `git branch`                                      | List all branches                      | `git branch`                                                   |
+|                                     | `git branch <branch-name>`                        | Create new branch                      | `git branch dev`                                               |
+|                                     | `git checkout <branch>`                           | Switch to another branch               | `git checkout dev`                                             |
+|                                     | `git checkout -b <branch>`                        | Create & switch to new branch          | `git checkout -b feature/login`                                |
+|                                     | `git branch -d <branch>`                          | Delete a branch                        | `git branch -d old-feature`                                    |
+|                                     | `git branch -D <branch>`                          | Force delete a branch                  | `git branch -D test`                                           |
+|                                     | `git merge <branch>`                              | Merge another branch into current      | `git merge dev`                                                |
+| ☁️ **Push & Pull (GitHub Sync)**    | `git push origin <branch>`                        | Push local branch to GitHub            | `git push origin main`                                         |
+|                                     | `git push -u origin <branch>`                     | Push branch & set as upstream          | `git push -u origin dev`                                       |
+|                                     | `git pull`                                        | Fetch & merge latest changes           | `git pull`                                                     |
+|                                     | `git fetch`                                       | Fetch latest commits without merge     | `git fetch origin`                                             |
+|                                     | `git push origin --delete <branch>`               | Delete a branch from GitHub            | `git push origin --delete feature1`                            |
+| 📦 **View History & Logs**          | `git log`                                         | View commit history                    | `git log`                                                      |
+|                                     | `git log --oneline`                               | View compact history                   | `git log --oneline`                                            |
+|                                     | `git show <commit-id>`                            | Show details of a commit               | `git show a3b4c5d`                                             |
+|                                     | `git diff`                                        | Compare working directory changes      | `git diff`                                                     |
+|                                     | `git diff --staged`                               | Compare staged changes                 | `git diff --staged`                                            |
+| 🧰 **Undo / Fix Mistakes**          | `git restore <file>`                              | Undo changes in a file                 | `git restore index.html`                                       |
+|                                     | `git reset --soft HEAD~1`                         | Undo last commit, keep changes staged  | `git reset --soft HEAD~1`                                      |
+|                                     | `git reset --hard HEAD~1`                         | Completely remove last commit          | `git reset --hard HEAD~1`                                      |
+|                                     | `git revert <commit-id>`                          | Revert changes made by specific commit | `git revert a5f3e1b`                                           |
+| 🔍 **Tagging & Releases**           | `git tag`                                         | List all tags                          | `git tag`                                                      |
+|                                     | `git tag <tag>`                                   | Create lightweight tag                 | `git tag v1.0`                                                 |
+|                                     | `git tag -a <tag> -m "message"`                   | Create annotated tag                   | `git tag -a v1.0 -m "Initial release"`                         |
+|                                     | `git push origin --tags`                          | Push all tags to GitHub                | `git push origin --tags`                                       |
+| 🧑‍🤝‍🧑 **Collaboration**          | `git fork` *(GitHub UI)*                          | Fork a repo to your account            | *(via GitHub website)*                                         |
+|                                     | `git clone <fork-url>`                            | Clone your fork locally                | `git clone https://github.com/yourname/repo.git`               |
+|                                     | `git push origin <branch>`                        | Push feature branch to fork            | `git push origin feature-branch`                               |
+|                                     | *(Pull Request)*                                  | Merge changes to main repo             | *(Via GitHub → “New Pull Request”)*                            |
+| 🔐 **SSH & Authentication**         | `ssh-keygen -t rsa -b 4096`                       | Generate SSH key                       | `ssh-keygen -t rsa -b 4096 -C "you@email.com"`                 |
+|                                     | `cat ~/.ssh/id_rsa.pub`                           | View public key to add to GitHub       | `cat ~/.ssh/id_rsa.pub`                                        |
+|                                     | `ssh -T git@github.com`                           | Test SSH connection                    | `ssh -T git@github.com`                                        |
+| 🧾 **Remote Repository Management** | `git remote -v`                                   | List all remote URLs                   | `git remote -v`                                                |
+|                                     | `git remote set-url origin <new-url>`             | Update remote URL                      | `git remote set-url origin git@github.com:user/repo.git`       |
+|                                     | `git fetch origin main`                           | Fetch updates from main branch         | `git fetch origin main`                                        |
+| ⚙️ **Cleanup Commands**             | `git clean -n`                                    | Show untracked files to be removed     | `git clean -n`                                                 |
+|                                     | `git clean -f`                                    | Remove untracked files                 | `git clean -f`                                                 |
+|                                     | `git gc`                                          | Optimize repository storage            | `git gc`                                                       |
+| 📊 **Shortcuts & Tips**             | `git stash`                                       | Save uncommitted changes temporarily   | `git stash`                                                    |
+|                                     | `git stash pop`                                   | Reapply stashed changes                | `git stash pop`                                                |
+|                                     | `git shortlog -s -n`                              | Show commits per contributor           | `git shortlog -s -n`                                           |
+|                                     | `git blame <file>`                                | Show who edited each line              | `git blame app.js`                                             |
